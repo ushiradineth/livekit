@@ -24,7 +24,7 @@ function CreateToken({ setToken }: { setToken: (token: string) => void }) {
       <Input id="name" placeholder="Name" onChange={(e) => setName(e.target.value)} />
       <Input id="room" placeholder="Room" onChange={(e) => setRoom(e.target.value)} />
       <Button onClick={getToken} disabled={isLoading || name === "" || room === ""} loading={isLoading}>
-        Create Token
+        Join Room
       </Button>
     </div>
   );
