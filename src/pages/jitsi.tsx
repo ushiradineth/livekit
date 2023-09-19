@@ -1,7 +1,5 @@
-import "@livekit/components-styles";
 import { useState } from "react";
 import { JaaSMeeting } from "@jitsi/react-sdk";
-import Spinner from "@/components/Spinner";
 import Head from "next/head";
 import CreateRoom from "@/components/CreateRoom";
 
@@ -22,6 +20,7 @@ export default function Jitsi() {
           onApiReady={(externalApi) => {
             console.log(externalApi);
           }}
+          onReadyToClose={() => location.reload()}
           getIFrameRef={(iframeRef) => {
             iframeRef.style.height = "100vh";
             iframeRef.style.width = "100vw";

@@ -14,6 +14,7 @@ export default function Livekit() {
       video={true}
       audio={true}
       token={token}
+      onDisconnected={() => location.reload()}
       connectOptions={{ autoSubscribe: false }}
       serverUrl={process.env.NEXT_PUBLIC_LIVEKIT_URL}
       // Use the default LiveKit theme for nice styles.
